@@ -1,0 +1,178 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+26-1. contact page Styles
+26-2. error section Styles / .error-section
+26-3. contact message Styles / .contact-message
+26-4. contact form2 Styles / .contact-form2
+26-5. login form2 Styles / .login-form2
+26-6. contact address Styles / .contact-address
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+26-2. contact block Styles / .contact-block
+-------------------------------------------------------------------*/
+.contact-block{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint($screen-sm-max){
+		padding-top: 20px;
+		padding-bottom: 50px;
+	}
+	.contact-map{
+		margin-bottom: 94px;
+		@include breakpoint($screen-sm-max){
+			margin-bottom: 30px;
+		}
+	}
+}
+/*------------------------------------------------------------------
+26-3. contact message Styles / .contact-message
+-------------------------------------------------------------------*/
+.contact-message{
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 300;
+	h2{
+        color: $lime;
+		margin: 0 0 17px;
+		font: 700 32px/40px $font-family-sans-serif;
+        .dark &{color: $white;}
+	}
+	P{margin: 0 0 57px;}
+}
+/*------------------------------------------------------------------
+26-4. contact form2 Styles / .contact-form2
+-------------------------------------------------------------------*/
+.contact-form2{
+	@extend %clearfix;
+	margin: 0;
+	.form-control{
+		margin: 0 0 10px;
+		box-shadow: none;
+		border-radius: 0;
+		height: 40px;
+		resize:none;
+        color: $stack;
+		padding: 6px 16px;
+        background: none;
+        border-color: $body-bg;
+		@include placeholder{color: $stack;}
+        .dark &{
+            color: $white;
+            border-color: #494949;
+            @include placeholder{color: $white;}
+        }
+		&:focus,
+		&:hover{
+			box-shadow: none;
+			border-color: $body-bg;
+		}
+	}
+	textarea{height: 100px !important;}
+	.btn-f-info:hover{
+        background:$lime;
+        border-color: $lime;
+        .dark &{
+            background: #191919;
+            border-color: #191919;
+        }
+	}
+}
+/*------------------------------------------------------------------
+26-5. login form2 Styles / .login-form2
+-------------------------------------------------------------------*/
+.login-form2{
+	margin: 0 auto;
+	font-size: 18px;
+	padding: 90px 0;
+	max-width: 500px;
+	@extend %clearfix;
+	line-height: 20px;
+	.form-control{
+		resize:none;
+		height: 40px;
+        color: $stack;
+        font-size: 12px;
+        background: none;
+		margin: 0 0 10px;
+		box-shadow: none;
+		padding: 6px 16px;
+        border-radius: 0px;
+		text-transform: uppercase;
+		border: 1px solid $gainsboro;
+		@include placeholder{color: $stack;}
+        .dark &{border-color: #494949;}
+		&:focus,
+		&:hover{
+			box-shadow: none;
+			border-color: $body-bg;
+		}
+	}
+	a{
+        color: $shark;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font: 600 12px/20px $font-family-sans-serif;
+		@include transition (all, 0.4s, ease);
+        .dark &{color: $stack;}
+		&:hover{text-decoration: none;}
+	}
+	p{margin: 0 0 15px;}
+	.btn-f-info{
+		border: 0;
+		width: 100%;
+		padding: 10px;
+		display: block;
+		margin:  0 0 20px;
+        background: $shark;
+	}
+}
+/*------------------------------------------------------------------
+26-6. contact address Styles / .contact-address
+-------------------------------------------------------------------*/
+.contact-address{
+    color: $shark;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 24px;
+    .dark &{color: $white;}
+	.alignleft{
+		float: left;
+		margin: 0 5.3% 0 0;
+		@include breakpoint($screen-sm-max){
+			float: none;
+			margin: 0 0 10px;
+			img{width: 100%;}
+		}
+	}
+	.contact-info{
+		overflow: hidden;
+		padding: 7px 0 0 7.2%;
+	}
+	h3{
+		margin: 0 0 6px;
+		position: relative;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+		font: 600 12px $font-family-sans-serif;
+		.fa{
+			position: absolute;
+			left: -40px;
+			top: 2px;
+			font-size: 18px;
+		}
+	}
+	.tel-box{
+		overflow: hidden;
+		margin: 0 0 10px;
+	}
+	.tel{display: block;}
+    a{color: $stack;}
+	a:hover{text-decoration: none;}
+	address{
+		display: block;
+		margin: 0 0 21px;
+		line-height: 24px;
+	}
+}

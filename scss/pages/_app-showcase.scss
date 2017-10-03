@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+16-1. app showcase page Styles
+16-2. appshowcase banner Styles / .appshowcase-banner
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+16-2. appshowcase banner Styles / .appshowcase-banner
+-------------------------------------------------------------------*/
+.appshowcase-banner{
+	@extend %boxreset;
+	.container{
+		z-index: 99;
+		position: relative;
+		@include element(before, 0, -9999px, 0, -9999px, rgba(0, 0, 0, 0.8));
+		&:before{display: block;}
+	}
+	.title{
+		color: $white;
+		display: block;
+		margin: 0 0 27px;
+		font: 300 60px/80px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 35px;
+			line-height: 40px;
+		}
+	}
+	.btn-holder{
+		overflow: hidden;
+		margin: 0 0 35px;
+	}
+	.frame{
+		padding: 249px 70px 146px 497px;
+		@include breakpoint($screen-sm-max){
+			padding: 249px 10px 146px 377px;
+		}
+		@include breakpoint($screen-xs-max){
+			padding: 200px 10px 400px;
+		}
+	}
+	.btn{margin: 0 4px 5px;}
+	.img{
+		bottom: 0;
+		left: 18px;
+		position: absolute;
+		@include breakpoint($screen-sm-max){
+			left: -80px;
+		}
+	}
+	.platform{
+		font-size: 24px;
+		li{padding: 0 26px 0 15px;}
+		a{
+			color: $white;
+			@include transition (all, 0.4s, ease);
+			&:hover{text-decoration: none;}
+		}
+	}
+}

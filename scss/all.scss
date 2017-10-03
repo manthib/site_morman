@@ -1,0 +1,1460 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:		Fekra
+Version:		1
+Last change:	10/25/2015 [no Change]
+Primary use:	Fekra Multi Purpose
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Google Fonts Include
+2. button styles
+3. heading styles
+4. Global styles
+5. Import styles of all pages
+1-1. header Styles / #header
+2-1. footer Styles / #footer
+3-1. agency page Styles
+4-1. creative page Styles
+5-1. croporate page Styles
+6-1. minimal page Styles
+7-1. personal page Styles
+8-1. photographer page Styles
+9-1. freelancer page Styles
+10-1. wedding page Styles
+11-1. shop page Styles
+12-1. restaurant page Styles
+13-1. architecture page Styles
+14-1. construction page Styles
+15-1. app showcase page Styles
+16-1. realestate page Styles
+17-1. travel page Styles
+18-1. yoga page Styles
+19-1. blog page Styles
+20-1. portfolio page Styles
+21-1. app landing page Styles
+22-1. one page Styles
+23-1. 404 page Styles
+24-1. contact page Styles
+25-1. shop inner page Styles
+26-1. helper elements Styles
+27-1. blog full width page Styles
+
+-------------------------------------------------------------------*/
+
+$mq-breakpoints: (
+    // Base device classes
+    mobile:      320px,
+    tablet:      640px,
+    desktop:    1024px,
+    widescreen: 1200px,
+    tvscreen:   1920px,
+
+    // Tweakpoints
+    mobileLandscape: 480px
+);
+
+// Show active breakpoint in top right corner of viewport
+// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, widescreen, tvscreen);
+
+@import "bootstrap-custom";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "base/markup-mixins";
+
+@import "mq";
+/*------------------------------------------------------------------
+1. Google Fonts Include
+-------------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic|Playfair+Display:400,400italic,700,700italic,900,900italic|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Raleway:400,100,200,300,500,600,700,800,900|Great+Vibes|Poppins:400,700,600,300,500);
+body{
+	color: $stack;
+	background: $white;
+	@include breakpoint($screen-xs-max){
+		font-size: 14px;
+        line-height: 18px;
+	}
+}
+.tel{
+	pointer-events: none;
+	@include breakpoint($screen-xs-max){
+		pointer-events: auto;
+	}
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="file"],
+input[type="submit"]{
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+	cursor: pointer;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	-webkit-appearance:none;
+	-webkit-border-radius:0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {-webkit-appearance: none;}
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?kafzz');
+	src:url('../fonts/icomoon.eot?#iefixkafzz') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?kafzz') format('truetype'),
+		url('../fonts/icomoon.woff?kafzz') format('woff'),
+		url('../fonts/icomoon.svg?kafzz#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+span.icomoon[class^="icon-"],
+span.icomoon[class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-hammer:before {content: "\e601";}
+.icon-lightning:before {content: "\e602";}
+.icon-triangular:before {content: "\e603";}
+.icon-truck:before {content: "\e604";}
+.icon-svg1:before {content: "\e600";}
+/*------------------------------------------------------------------
+2. button styles
+-------------------------------------------------------------------*/
+.btn{
+	border-radius: 0;
+	padding: 8px 20px;
+	text-align: center;
+	white-space: normal;
+	vertical-align: top;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font: 12px/20px $font-family-base;
+	@include transition (all, 0.4s, ease);
+	&:hover{text-decoration: none;}
+}
+.btn:hover, .btn:focus, .btn.focus{color: inherit;}
+.btn-dark{
+	border-color: $shark;
+	color: $shark !important;
+	text-transform: uppercase;
+	.dark &{
+		border-color: rgba(143, 143, 143, 0.6);
+		color: rgba(143, 143, 143, 0.6) !important;
+	}
+	&:hover{
+		background: $shark;
+		border-color: $shark;
+		color: $white !important;
+		.dark &{
+			color: #8f8f8f;
+			background: transparent !important;
+			color: rgba(143, 143, 143, 1) !important;
+			border-color: rgba(143, 143, 143, 1) !important;
+		}
+	}
+}
+.btn-f-default{
+	color: $white;
+	border-color:  $white;
+	background: transparent;
+	border: 1px solid transperent;
+	&:hover{color: $white;}
+}
+.btn-f-info{
+	color: $white;
+	text-transform: uppercase;
+	border: 1px solid transperent;
+	&:hover{
+		color: $white;
+		border-color: $white;
+		background: transparent;
+	}
+}
+.btn-history{
+	border: 0;
+	color: $shark2;
+	font-size: 16px;
+	overflow: hidden;
+	border-radius: 0;
+	background: $white;
+	font-style: italic;
+	position: relative;
+	padding: 11px 58px 11px 19px;
+	@include transition (all, 0.4s, ease);
+	&:before{
+		top: 0;
+		width: 58px;
+		bottom: -1px;
+		right: -20px;
+		@extend %after;
+		transform: skewX(-20deg);
+		-ms-transform: skewX(-20deg);
+		-webkit-transform: skewX(-20deg);
+		@include transition (all, 0.4s, ease);
+	}
+	&:after{
+		top: 10px;
+		bottom: 0;
+		z-index: 2;
+		right: 14px;
+		color: $white;
+		font-size: 20px;
+		content: "\f101";
+		position: absolute;
+		transform: skewX(0deg);
+		font-family: 'FontAwesome';
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		@include transition (all, 0.4s, ease);
+	}
+	&:hover{
+		color: $white;
+		&:before{
+			background: $lime;
+			.dark &{ background: #191919;}
+		}
+	}
+}
+.btn-more{
+	color: $stack;
+	text-transform: uppercase;
+	border: 1px solid $gainsboro;
+	.dark &{
+		color: rgba(143, 143, 143, 0.6);
+		border-color: rgba(143, 143, 143, 0.6);
+	}
+	&:hover{
+		color: $white;
+		.dark &{
+			color: #8f8f8f;
+			background: transparent;
+			border-color: rgba(143, 143, 143, 1);
+			color: rgba(143, 143, 143, 1);
+		}
+	}
+}
+.btn-resume{
+	color: $white;
+	text-transform: uppercase;
+	&:hover{
+		background: transparent;
+		border-color: $lime;
+	}
+}
+.know-more{
+	color: $white;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	@include transition (all, 0.4s, ease);
+	.dark &{
+		color: rgba(143, 143, 143, 0.6);
+		border-color: rgba(143, 143, 143, 0.6);
+	}
+	&:hover{
+		color: $white;
+		background: $lime;
+		border-color: $lime;
+		.dark &{
+			color: #8f8f8f;
+			background: transparent;
+			border-color: rgba(143, 143, 143, 1);
+			color: rgba(143, 143, 143, 1);
+		}
+	}
+}
+.portfolio-view{
+    color:$stack;
+    font-size: 12px;
+    line-height:14px;
+    @include transition (all, 0.4s, ease);
+    span{
+        padding: 0 1px;
+        letter-spacing: 2px;
+        @include transition (all, 0.4s, ease);
+        @include vertical-align(inline-block, middle);
+    }
+    &:hover{
+        text-decoration: none;
+        span{padding: 0 8px;}
+        &:before,
+        &:after{color:$stack;}
+    }
+    &:after{
+        content: "]";
+        @include vertical-align(inline-block, middle);
+    }
+    &:before{
+        content: "[";
+        @include vertical-align(inline-block, middle);
+    }
+}
+/*------------------------------------------------------------------
+3. heading styles
+-------------------------------------------------------------------*/
+.page-heading{
+    z-index: 5;
+	font-size: 16px;
+	overflow: hidden;
+	max-width: 900px;
+	line-height: 26px;
+    position: relative;
+	text-align: center;
+    margin: 0 auto 60px;
+	@include breakpoint($screen-xs-max){
+        margin: 0 auto 30px;
+		font-size: 14px;
+        line-height: 18px;
+	}
+	h1{
+        margin: 0;
+		font: 50px/60px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 30px;
+			line-height: 40px;
+		}
+	}
+	h2{
+        margin: 0;
+	    font: 36px/50px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 25px;
+			line-height: 30px;
+		}
+	}
+	h3{
+        margin: 0;
+	    font: 35px/45px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+	h4{
+        margin: 0;
+		font-size: 30px;
+		line-height: 40px;
+	    font: 30px/40px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 18px;
+			line-height: 25px;
+		}
+	}
+	h5{
+        margin: 0;
+		font-size: 25px;
+		line-height: 30px;
+	    font: 25px/30px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+	h6{
+        margin: 0;
+		font-size: 20px;
+		line-height: 25px;
+	    font: 20px/25px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
+	.title{
+		color: $stack;
+		font-size: 14px;
+		line-height: 25px;
+	}
+    .small-heading{
+        font-size: 26px;
+        line-height: 30px;
+    }
+	p{margin: 0 !important;}
+    .font-light{font-weight: 300;}
+    .font-bold{font-weight: 700;}
+    .font-medium{font-weight: 600;}
+    .heading{
+        display: block;
+        padding: 0 0 25px;
+	    position: relative;
+        &:after{
+            bottom: 0;
+            left: 50%;
+            @extend %after;
+            margin: 0 0 0 -40px;
+            @include size(80px, 4px);
+        }
+    }
+    .heading2{
+        display: block;
+        padding: 0 0 20px;
+	    position: relative;
+        &:before,
+        &:after{
+            left: 50%;
+            bottom: 1px;
+            @extend %after;
+            margin: 0 0 0 -29px;
+            @include size(23px, 2px);
+        }
+        &:before{margin: 0 0 0 4px;}
+    }
+    .heading3{
+        display: block;
+        padding: 0 0 20px;
+	    position: relative;
+		&:after{
+			left: 50%;
+			bottom: 1px;
+			@extend %after;
+			margin: 0 0 0 -40px;
+			@include size(80px, 2px);
+		}
+		&:before{
+			left: 50%;
+			bottom: -6px;
+			@extend %after;
+			margin: 0 0 0 -4px;
+			@include arrow(7px, 4px, 0, 4px, transparent, transparent, transparent, transparent);
+		}
+    }
+	.heading4{
+		@include vertical-align(inline-block, top);
+		@include element2(before, 50%, -63px, auto, auto);
+		@include element2(after, 50%, auto, auto, -63px);
+		&:after,
+		&:before{
+			font-size: 15px;
+			content: "\e600";
+            line-height: 20px;
+            margin: -10px 0 0;
+			font-family: 'icomoon';
+		}
+		&:after{
+			transform : rotateY(180deg);
+			-moz-transform    : rotateY(180deg);
+			-ms-transform     : rotateY(180deg);
+			-o-transform      : rotateY(180deg);
+			-webkit-transform : rotateY(180deg);
+		}
+	}
+    .heading5{
+		@include vertical-align(inline-block, top);
+		@include element(after, 50%, auto, auto, 100%, transparent);
+		@include element(before, 50%, 100%, auto, auto, transparent);
+		.dark &{color: $white;}
+		&:before,
+		&:after{
+			margin: -3.5px 0 0 4px;
+			@include size(7px, 6px);
+		}
+		&:before{margin: -3.5px 4px 0 0;}
+    }
+    .heading6{
+        padding: 0 0 20px;
+	    position: relative;
+		@include vertical-align(inline-block, top);
+        &:after{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            @extend %after;
+            background: $white;
+        }
+    }
+    .heading7{
+        position: relative;
+		@include vertical-align(inline-block, top);
+		&:before,
+		&:after{
+			top: 50%;
+			left: -45px;
+			@extend %after;
+            margin: -2px 0 0;
+			@include size(35px, 6px);
+			border: solid transparent;
+			border-width: 2px 0;
+		}
+		&:before{
+			left: auto;
+			right: -45px;
+		}
+    }
+    .heading8{
+		@include vertical-align(inline-block, top);
+		@include element(after, 50%, 100%, auto, auto, transparent);
+		@include element(before, 50%, auto, auto, 100%, transparent);
+		&:before,
+		&:after{
+			@include size(20px, 2px);
+			margin:-1px 26px 0 0;
+		}
+		&:before{margin: -1px 0 0 26px;}
+    }
+    .white{color: $white;}
+    .lime{
+        color: $lime;
+        .dark &{color: $white;}
+    }
+	.icon{
+		color: $white;
+        line-height: 2;
+		display: block;
+		font-size: 37px;
+		padding: 3px 0 0;
+		text-align: center;
+		border-radius: 50%;
+		margin: 0 auto 20px;
+		@include square(80px);
+		@include transition (all, 0.4s, ease);
+		.fa-fire{margin: 7px 0 0;}
+	}
+    &.white{color: $white;}
+    &.left-align{text-align: left;}
+    &.small .heading:after{
+        margin: 0 0 0 -20px;
+        @include size(40px, 4px);
+    }
+    &.style2 .heading:after{
+        margin: 0 0 0 -33px;
+        @include size(62px, 2px);
+    }
+    &.dark-style{
+        .heading:after{
+            background: $lime;
+            .dark &{background: $white;}
+        }
+        .heading8,
+        .heading2{
+            &:before,
+            &:after{
+                background: $lime;
+                .dark &{background: $white;}
+            }
+        }
+        .heading3{
+            &:after{
+                background: $lime;
+                .dark &{background: $white;}
+            }
+            &:before{
+                border-color: $lime transparent transparent;
+                .dark &{border-color: $white transparent transparent;}
+            }
+        }
+        .heading4{
+            &:before,
+            &:after{
+                color: $lime;
+                .dark &{color: $white;}
+            }
+        }
+        .heading6:after{
+            background: $lime;
+            .dark &{background: $white;}
+        }
+        .heading7{
+            &:before,
+            &:after{
+                border-color: $lime;
+                .dark &{border-color: $white;}
+            }
+        }
+        .dot{
+            color: $lime;
+            .dark &{color: $white;}
+        }
+    }
+}
+
+.page-banner{
+	z-index: 1;
+	color: $white;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 20px;
+	@extend %boxreset;
+	letter-spacing: 2px;
+	.heading{
+		color: $white;
+		margin: 0 0 20px;
+		padding: 0 0 14px;
+		font: 600 36px/50px $font-family-sans-serif;
+		@include element(before, 100%, auto, auto, 0, transparent);
+		@include breakpoint($screen-sm-max){
+			font-size: 30px;
+			line-height: 35px;
+		}
+		&:before{
+			margin: 0;
+			@include size(50px, 4px);
+		}
+	}
+	.parallax-holder,
+	.video-area,
+	.stretch{
+		z-index: 1;
+		@include element2(before, 0, 0, 0, 0);
+		position: absolute;
+		&:before{
+			z-index: 1;
+			background: rgba(black, 0.5);
+		}
+	}
+	.parallax-holder,
+	.video-area{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	.mejs-offscreen{display: none;}
+	.container-max,
+	.container{
+		padding-top: 187px;
+		padding-bottom: 99px;
+		position: relative;
+		z-index: 999;
+	}
+	p{margin: 0 0 10px;}
+	.holder{
+		float: left;
+		max-width: 850px;
+	    text-transform: uppercase;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			max-width: 100%;
+		}
+	}
+	.breadcrumbs{
+		margin: 0;
+		float: right;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 18px;
+		padding: 44px 0 0;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		@include breakpoint($screen-xs-max){
+			float: none;
+			max-width: 100%;
+			overflow: hidden;
+			padding: 15px 0 0;
+		}
+		li{
+			@include element2(before, 0, auto, auto, -3px);
+			&:before{content: "/";}
+			&:first-child{
+                a{margin-left: 0px;}
+                &:before{display: none;}
+            }
+			&:last-child a{margin-right: 0px;}
+			a{
+				color: $alto;
+                margin: 0 10px;
+				@include transition (all, 0.4s, ease);
+				&:hover{text-decoration: none;}
+			}
+			&.active a{pointer-events:none;}
+		}
+	}
+    &.small{
+        .container-max,
+        .container{
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+        .heading{
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 40px;
+            @include breakpoint($screen-xs-max){
+                font-size: 25px;
+                line-height: 35px;
+            }
+            &:before{display: none;}
+	    }
+        .breadcrumbs{padding: 10px 3px 0 0;}
+    }
+	&.grey{
+        color: $stack;
+        .heading{
+            color: $shark;
+            .dark &{color: $stack;}
+        }
+        .breadcrumbs li:before,
+        .breadcrumbs li a{color: $stack;}
+        background: $seashell;/*background: $dove-gray;*/
+        .dark &{background: #191919;}
+    }
+	&.rightalign{
+		.holder{
+			float: right;
+			text-align: right;
+			@include breakpoint($screen-xs-max){
+				float: none;
+				text-align: left;
+			}
+		}
+		.breadcrumbs{
+			float: left;
+			@include breakpoint($screen-xs-max){
+				float: none;
+			}
+		}
+		.heading:before{
+			right: 0;
+			left: auto;
+		}
+	}
+	&.center{
+		.holder{
+			float: none;
+			max-width: 100%;
+			text-align: center;
+		}
+		.heading:before{
+			left: 50%;
+			margin: 0 0 0 -25px;
+		}
+		.breadcrumbs{
+			float: none;
+			max-width: 100%;
+			overflow: hidden;
+			padding: 10px 0 0;
+			text-align: center;
+		}
+	}
+	&.style2{
+		.container-max,
+		.container{
+			padding-top: 50px;
+			padding-bottom: 40px;
+		}
+		.heading{
+			font-size: 34px;
+			padding: 0 0 7px;
+			&:before{
+				right: 0;
+				width: auto;
+			}
+		}
+		.breadcrumbs{
+			font-size: 12px;
+			padding: 39px 0 0;
+		}
+		&.rightalign .heading:before{
+            left: 0;
+            margin: 0;
+		}
+        &.center .heading{
+            vertical-align: top;
+            display: inline-block;
+            &:before{
+                left: 0;
+                margin: 0;
+            }
+		}
+	}
+	&.dark{background: $lime;}
+	&.pattern{background: url(../images/icons/pattern01.jpg);}
+}
+/*------------------------------------------------------------------
+4. Global styles
+-------------------------------------------------------------------*/
+.parallax-holder{
+	overflow: hidden;
+	@extend %postionreset;
+	.parallax-frame {
+		@extend %postionreset;
+	}
+	&.no-parallax{
+		.parallax-frame {
+			background-attachment: inherit !important;
+			background-position: 50% 50% !important;
+		}
+	}
+}
+.stretch{
+	overflow: hidden;
+	@extend %postionreset;
+	img{
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+#gotoTop{
+	right: 20px;
+	bottom: 20px;
+	opacity: 0.8;
+	color: $white;
+	z-index: 9999;
+	position: fixed;
+	font-size: 20px;
+	cursor: pointer;
+	background: #666;
+	padding: 12px 0 0;
+	text-align: center;
+	border-radius: 50px;
+	@include square(50px);
+	@include transition (all, 0.4s, ease);
+}
+.changer-active #style-changer{margin: 0;}
+#style-changer{
+	top: 186px;
+	left: 0;
+	width: 244px;
+	z-index: 9999;
+	position: fixed;
+    background: $white;
+	margin: 0 0 0 -245px;
+    border: 1px solid #eee;  
+	padding: 16px 17px 5px 17px;
+	@include transition (margin, 0.4s, ease);
+    -webkit-box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+    -moz-box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+    box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+	.dark &{
+		background: $lime;
+		border-color: #494949;
+		-webkit-box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+		-moz-box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+		box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+	}
+	.title{
+        color: $lime;
+		display: block;
+		margin: 0 0 15px;
+		padding: 0 0 8px;
+		text-transform: uppercase;
+		border-bottom: 1px solid $body-bg;
+		font: 500 16px/24px $font-family-sans-serif;
+		.dark &{
+			color: $white;
+			border-color: #494949;
+		}
+	}
+	.subtitle{
+        color: $stack;
+		display: block;
+		margin: 0 0 13px;
+        letter-spacing: 2px;
+		text-transform: uppercase;
+		font: 500 13px/24px $font-family-sans-serif;
+		.dark &{color: $white;}
+	}
+	.list-color{
+		margin: 0 0 12px;
+		padding: 0 0 14px;
+		border-bottom: 1px solid $body-bg;
+		.dark &{border-color: #494949;}
+		li{padding: 0 1px 4px 5px;}
+		a{
+			display: block;
+			border-radius: 3px;
+			@include square(33px);
+			&:hover{
+				opacity: 0.7;
+				text-decoration: none;
+			}
+		}
+	}
+	.list-style{
+		margin: 0 0 14px;
+		padding: 0 0 19px;
+		border-bottom: 1px solid #eee;
+		.dark &{border-color: #494949;}
+		li{
+			padding: 0 5px 0 2px;
+			&.dark{background: transparent;}
+		}
+		.btn{
+			width: 95px;
+			padding: 4px;
+			color: $white;
+			display: block;
+			font-size: 12px;
+			border-radius: 0;
+			background: $lime;
+			text-align: center;
+			border: 1px solid  $lime;
+			text-transform: uppercase;
+			.dark &{
+				color: $white;
+				border-color: #494949;
+			}
+			&:hover{
+				color: $lime;
+                text-decoration: none;
+				background: transparent;
+				.dark &{color: $white;}
+			}
+			&.add{
+				color: $lime;
+				background: transparent;
+				.dark &{
+					color: $white;
+					border-color: #494949;
+				}
+				&:hover{
+					color: $white;
+					background: $lime;
+				}
+			}
+		}
+		.btn2{
+			color: $white;
+			width: 95px;
+			padding: 4px;
+			display: block;
+			font-size: 12px;
+			border-radius: 0;
+			text-align: center;
+			text-transform: uppercase;
+			border: 1px solid  transparent;
+			&:hover{text-decoration: none;}
+			&:hover{
+				color: $lime;
+				border-color:  $lime;
+				background: transparent;
+				.dark &{
+					color: $white;
+					border-color:  $white;
+				}
+			}
+			&.add{
+				color: $lime;
+				border-color:  $lime;
+				background: transparent;
+				.dark &{
+					color: $white;
+					border-color:  $white;
+				}
+				&:hover{color: $white;}
+			}
+		}
+		&.add{
+			border: 0;
+			padding: 0;
+		}
+	}
+	a{@include transition (all, 0.4s, ease);}
+	.changer-opener{
+		left: 100%;
+		font-size: 25px;
+		padding: 10px 0 0;
+		text-align: center;
+		position: absolute;
+		background: $white;
+		border-radius: 0 5px 5px 0;
+		@include size(49px , 54px);
+        top: 50px;
+        border-right: 1px solid #eee;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        -webkit-box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+        -moz-box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+        box-shadow: 10px 10px 0 0 rgba(122,122,122,0.1);
+		&:hover{text-decoration: none;}
+		.dark &{
+			background: $lime;
+			border-color: #494949;
+			-webkit-box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+			-moz-box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+			box-shadow: 10px 10px 0 0 rgba(70, 70, 70, 0.1);
+		}
+	}
+    .awesome a{background: $awesome;}
+    .bleu-de-france a{background: $bleu-de-france;}
+    .bleu-de-france2 a{background: $bleu-de-france2;}
+    .chateau-green a{background: $chateau-green;}
+    .dark-pastel-red a{background: $dark-pastel-red;}
+    .di-serria a{background: $di-serria;}
+    .light-green a{background: $light-green;}
+    .light-taupe a{background: $light-taupe;}
+    .niagara a{background: $niagara;}
+    .orange a{background: $orange;}
+    .pastel-orange a{background: $pastel-orange;}
+    .pastel-red a{background: $pastel-red;}
+    .pastel-red2 a{background: $pastel-red;}
+    .rich-electric-blue a{background: $rich-electric-blue;}
+    .rodeo-dust a{background: $rodeo-dust;}
+	.sun a{background: $sun;}
+    .sunglo a{background: $sunglo;}
+	.twine a{background: $twine;}
+	.ucla-gold a{background: $ucla-gold;}
+	.yellow a{background: $yellow;}
+	.zest a{background: $zest;}
+    .my-sin a{background: $my-sin;}
+}  
+#pre-loader{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+	display: block;
+    position: fixed;
+    text-align: center;
+    background: $white;
+    .loader-holder{
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: -200px 0 0 -200px;
+        @include v-align(frame, middle);
+    }
+    img{
+        margin: 0 0 45px;
+        display: inline-block;
+    }
+	.no-transition &{ display: none !important;}
+}
+.popup-holder {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+}
+.beans-slider{
+	@extend %boxreset;
+	.beans-mask{@extend %boxreset;}
+	.beans-slideset{
+		width: 99999px;
+		float: left;
+	}
+	.beans-slide{
+		width: 100%;
+		float: left;
+		position: relative;
+		&.active{z-index: 1;}
+	}
+	.beans-pagination{
+		left: 0;
+		right: 0;
+		z-index: 99;
+		bottom: 15px;
+		text-align: center;
+		position: absolute;
+		ul{@extend %listreset;}
+	}
+	&.not-enough-slides a.btn-prev,
+	&.not-enough-slides a.btn-next {visibility: hidden;}
+	.parallax-holder,
+	.stretch{z-index: -1;}
+}
+.beans-stepslider{
+	@extend %boxreset;
+	.beans-mask{@extend %boxreset;}
+	.beans-slideset{
+		float: left;
+		width: 9999px;
+	}
+	.beans-slide{
+		float: left;
+		&.active{z-index: 1;}
+	}
+	.beans-pagination{
+		left: 0;
+		right: 0;
+		z-index: 99;
+		bottom: 15px;
+		text-align: center;
+		position: absolute;
+		ul{@extend %listreset;}
+	}
+	&.not-enough-slides a.btn-prev,
+	&.not-enough-slides a.btn-next {visibility: hidden;}
+}
+.beans-fadeslider{
+	@extend %boxreset;
+	.slideset{@extend %postionreset;}
+	.slide{
+		z-index: 1;
+		@extend %postionreset;
+		&.active{z-index: 2;}
+	}
+	&.not-enough-slides a.btn-prev,
+	&.not-enough-slides a.btn-next {visibility: hidden;}
+	.beans-pagination{
+		margin: 0;
+		top: auto;
+		z-index: 99;
+		bottom: 40px;
+		text-align: center;
+		@extend %postionreset;
+		@include breakpoint($screen-xs-max){
+			bottom: 53px;
+		}
+		ul{@extend %listreset;}
+	}
+}
+.boxed-v{
+	#wrapper{
+		margin: 0 auto;
+		max-width: 1350px;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+	}
+	&.no-boxed #wrapper{max-width: 100%;}
+}
+.container-max{
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+}
+body.boxed-v #wrapper{
+	margin: 0 auto;
+	max-width: 1350px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
+.mejs-offscreen{display: none;}
+.video-lightbox{width: 900px;}
+.port-parallex{
+	height: 572px;
+	@extend %boxreset;
+	&.small{height: 460px;}
+}
+.parallax-section{
+    color: $white;
+	@extend %boxreset;
+	font: 16px/30px $font-family-base;
+	@include breakpoint($screen-xs-max){
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.over{
+		@extend %postionreset;
+		background: rgba(0, 0, 0, 0.6);
+	}
+	.over-holder{
+		display: table;
+		padding: 20px 0;
+		table-layout: fixed;
+		@include square(100%);
+	}
+	.over-frame{
+		text-align: center;
+		display: table-cell;
+		@include square(100%);
+		vertical-align: middle;
+	}
+	h2{
+		margin: 0 0 15px;
+		font: 700 60px/80px $font-family-sans-serif;
+		@include breakpoint($screen-sm-max){
+			font-size: 30px;
+			line-height: 35px;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+	h3{
+		margin: 0 0 15px;
+		font: 300 50px/60px $font-family-sans-serif;
+		@include breakpoint($screen-sm-max){
+			font-size: 25px;
+			line-height: 30px;
+		}
+		@include breakpoint($screen-xs-max){
+			font-size: 18px;
+			line-height: 20px;
+		}
+	}
+	.next-section{
+		left: 50%;
+		bottom: 0;
+		width: 28px;
+		height: 40px;
+        color: $white;
+		border-radius: 8px;
+		text-align: center;
+		position: absolute;
+		margin: 0 0 40px -14px;
+		border: 2px solid $white;
+		@include transition (all, 0.4s, ease);
+		.fa{
+			position: relative;
+			animation-duration: 2.5s;
+			animation-name: hvr-ripple-out;
+			-webkit-animation-name: hvr-ripple-out;
+			-webkit-animation-duration: 2.5s;
+			animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-ms-animation-iteration-count: infinite;
+		}
+        &:hover{
+            text-decoration: none;
+            background: $white;
+        }
+	}
+	.scroll{
+        color: $white;
+		font-size: 13px;
+		line-height: 20px;
+		vertical-align: top;
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 7px 32px 7px 30px;
+		@include transition (all, 0.4s, ease);
+		.fa{
+			margin: 0 0 0 7px;
+			position: relative;
+			animation-duration: 2.5s;
+			animation-name: hvr-ripple-out;
+			-webkit-animation-name: hvr-ripple-out;
+			-webkit-animation-duration: 2.5s;
+			animation-iteration-count: infinite;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-ms-animation-iteration-count: infinite;
+		}
+		&:hover{text-decoration: none;}
+		&.add{background: #9b59b6;}
+	}
+	p{margin: 0 0 33px;}
+}
+.section{
+	&.dark{background: #191919;}
+	&.video-area,
+	&.parallax-holder{
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		position: absolute;
+		&:before{
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: "";
+			position: absolute;
+			background: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
+@-webkit-keyframes hvr-ripple-out {
+	0% {top: -5px;}
+	33% {top: 5px;}
+	67% {top: -5px;}
+	100% {top: 5px;}
+}
+@keyframes hvr-ripple-out {
+	0% {top: -5px;}
+	33% {top: 5px;}
+	67% {top: -5px;}
+	100% {top: 5px;}
+}
+.margin-zero{margin: 0 !important;}
+.allmargin{margin: 50px !important;}
+.padding-zero{padding: 0 !important;}
+.margin-t-zero{margin-top: 0 !important;}
+.margin-top-30{margin-top: 30 !important;}
+.margin-top-60{margin-top: 60 !important;}
+.margin-top-90{margin-top: 90 !important;}
+.margin-b-zero{margin-bottom: 0 !important;}
+.padding-top-zero{padding-top: 0 !important;}
+.padding-top-30{padding-top: 30px !important;}
+.padding-top-60{padding-top: 60px !important;}
+.padding-top-90{padding-top: 90px !important;}
+.padding-b-zero{padding-bottom: 0 !important;}
+.margin-top-100{margin-top: 100px !important;}
+.padding-top-100{padding-top: 100px !important;}
+.padding-right-zero{padding-right: 0 !important;}
+.margin-bottom-10{margin-bottom: 10px !important;}
+.margin-bottom-20{margin-bottom: 20px !important;}
+.margin-bottom-30{margin-bottom: 30px !important;}
+.margin-bottom-60{margin-bottom: 60px !important;}
+.margin-bottom-90{margin-bottom: 90px !important;}
+.padding-bottom-zero{padding-bottom: 0 !important;}
+.padding-bottom-10{padding-bottom: 10px !important;}
+.padding-bottom-20{padding-bottom: 20px !important;}
+.padding-bottom-30{padding-bottom: 30px !important;}
+.padding-bottom-50{padding-bottom: 50px !important;}
+.padding-bottom-60{padding-bottom: 60px !important;}
+.padding-bottom-90{padding-bottom: 90px !important;}
+.margin-bottom-100{margin-bottom: 100px !important;}
+.padding-bottom-100{padding-bottom: 100px !important;}
+.clearfix-sm{
+	@media only screen and (max-width:$screen-xs-max){clear: left;}
+}
+@media only screen and (max-width:$screen-xs-max){
+	.padding-xs-zero{padding: 0 !important;}
+}
+@media only screen and (max-width:$screen-sm-max){
+	.padding-sm-zero{padding: 0 !important;}
+	.padding-sm-topzero{padding-top: 0 !important;}
+	.padding-sm-bottomzero{padding-bottom: 0 !important;}
+	.padding-bottomsm-60{padding-bottom: 60px !important;}
+	.padding-bottom-90{padding-bottom: 60px !important;}
+	.margin-bottom-100{margin-bottom: 60px !important;}
+	.padding-bottom-100{padding-bottom: 60px !important;}
+	.margin-bottom-90{margin-bottom: 60px !important;}
+	.margin-bottom-90{margin-bottom: 60px !important;}
+	.margin-top-100{margin-top: 60px !important;}
+	.padding-top-100{padding-top: 60px !important;}
+	.margin-top-100{margin-top: 60px !important;}
+	.padding-top-100{padding-top: 60px !important;}
+	.padding-top-90{padding-top: 60px !important;}
+	.margin-top-90{margin-top: 60px !important;}
+	.allmargin{margin: 30px !important;}
+}
+.bg-none{background: transparent !important;}
+.bg-white{background: #fff;}
+.bg-grey{background: $desert-storm;}
+.bg-shark{background: #2a2a2a;}
+.bg-dark-jungle{background: #222;}
+body.boxed-v{background: url(../images/icons/pattern02.jpg) #fff;}
+.dark{background: #222;}
+.dark .bg-grey{background: #2a2a2a;}
+.dark .dark-bottom-border{border-bottom: 1px solid #494949;}
+body.boxed-v{background: url(../images/icons/pattern02.jpg) #fff;}
+body.dark.boxed-v{background: url(../images/icons/pattern03.jpg) #fff;}
+body.boxed-v #wrapper{background: $white;}
+body.dark.boxed-v #wrapper{background: $lime;}
+.no-bg:after,
+.no-bg:before,
+.no-bg{background: transparent !important;}
+.border-zero{border: 0 !important;}
+.color-shark{color: $shark !important;}
+.color-stack{color: $stack !important;}
+.dark .color-shark{color: $white !important;}
+.playfair{font-family: $font-playfair !important;}
+.no-float{float: none !important;}
+
+/*------------------------------------------------------------------
+5. Import styles of all pages
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+1-1. header Styles / #header
+-------------------------------------------------------------------*/
+@import "page-assets/header";
+/*------------------------------------------------------------------
+2-1. footer Styles / #footer
+-------------------------------------------------------------------*/
+@import "page-assets/footer";
+/*------------------------------------------------------------------
+3-1. agency page Styles
+-------------------------------------------------------------------*/
+@import "pages/agency";
+/*------------------------------------------------------------------
+4-1. creative page Styles
+-------------------------------------------------------------------*/
+@import "pages/creative";
+/*------------------------------------------------------------------
+5-1. croporate page Styles
+-------------------------------------------------------------------*/
+@import "pages/croporate";
+/*------------------------------------------------------------------
+6-1. minimal page Styles
+-------------------------------------------------------------------*/
+@import "pages/minimal";
+/*------------------------------------------------------------------
+7-1. personal page Styles
+-------------------------------------------------------------------*/
+@import "pages/personal";
+/*------------------------------------------------------------------
+8-1. photographer page Styles
+-------------------------------------------------------------------*/
+@import "pages/photographer";
+/*------------------------------------------------------------------
+9-1. freelancer page Styles
+-------------------------------------------------------------------*/
+@import "pages/freelancer";
+/*------------------------------------------------------------------
+10-1. wedding page Styles
+-------------------------------------------------------------------*/
+@import "pages/wedding";
+/*------------------------------------------------------------------
+11-1. shop page Styles
+-------------------------------------------------------------------*/
+@import "pages/shop";
+/*------------------------------------------------------------------
+12-1. restaurant page Styles
+-------------------------------------------------------------------*/
+@import "pages/restaurant";
+/*------------------------------------------------------------------
+13-1. architecture page Styles
+-------------------------------------------------------------------*/
+@import "pages/architecture";
+/*------------------------------------------------------------------
+14-1. construction page Styles
+-------------------------------------------------------------------*/
+@import "pages/construction";
+/*------------------------------------------------------------------
+15-1. app showcase page Styles
+-------------------------------------------------------------------*/
+@import "pages/app-showcase";
+/*------------------------------------------------------------------
+16-1. realestate page Styles
+-------------------------------------------------------------------*/
+@import "pages/realestate";
+/*------------------------------------------------------------------
+17-1. travel page Styles
+-------------------------------------------------------------------*/
+@import "pages/travel";
+/*------------------------------------------------------------------
+18-1. yoga page Styles
+-------------------------------------------------------------------*/
+@import "pages/yoga";
+/*------------------------------------------------------------------
+19-1. blog page Styles
+-------------------------------------------------------------------*/
+@import "pages/blog";
+/*------------------------------------------------------------------
+20-1. portfolio page Styles
+-------------------------------------------------------------------*/
+@import "pages/portfolio";
+/*------------------------------------------------------------------
+21-1. app landing page page Styles
+-------------------------------------------------------------------*/
+@import "pages/app-landing-page";
+/*------------------------------------------------------------------
+22-1. one-page page Styles
+-------------------------------------------------------------------*/
+@import "pages/one-page";
+/*------------------------------------------------------------------
+23-1. 404 page Styles
+-------------------------------------------------------------------*/
+@import "pages/404";
+/*------------------------------------------------------------------
+24-1. contact page Styles
+-------------------------------------------------------------------*/
+@import "pages/contact";
+/*------------------------------------------------------------------
+25-1. shop inner page Styles
+-------------------------------------------------------------------*/
+@import "pages/shop-inner";
+/*------------------------------------------------------------------
+26-1. helper elements page Styles
+-------------------------------------------------------------------*/
+@import "pages/helper-elements";
+/*------------------------------------------------------------------
+27-1. blog full width page Styles
+-------------------------------------------------------------------*/
+@import "pages/blog-full-width";

@@ -1,0 +1,89 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+6-2. w7 Styles / .w7
+6-3. showcase gallery Styles / .showcase-gallery
+6-4. photo heading Styles / .photo-heading
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+6-2. w7 Styles / .w7
+-------------------------------------------------------------------*/
+.w7{
+	position: relative;
+	padding:0 0 0 260px;
+	@include breakpoint($screen-sm-max){
+		padding: 0;
+		@include transition (margin, 0.4s, ease);
+	}
+}
+/*------------------------------------------------------------------
+6-3. showcase gallery Styles / .showcase-gallery
+-------------------------------------------------------------------*/
+.showcase-gallery{
+	.beans-slide{
+		position: relative;
+		padding:0 0 0 112px;
+		@include v-align2(heading, $valign: middle);
+		@include breakpoint($screen-xs-max){
+			padding: 0 0 0 30px;
+		}
+		.heading{
+			z-index:99;
+            color:$white;
+			position: relative;
+			margin:-7px 0 0;
+			h2{
+				margin:0;
+				letter-spacing:10px;
+				text-transform: capitalize;
+				font:italic 100px/100px $font-family-base;
+				@include breakpoint($screen-xs-max){
+					font-size: 30px;
+					line-height: 35px;
+				}
+			}
+		}
+	}
+	.beans-pagination{
+		bottom: 80px;
+		@include breakpoint($screen-xs-max){
+			bottom: 53px;
+		}
+		li{
+			padding:0 4px;
+			float: none;
+			@include vertical-align(inline-block, top);
+            &.active a{background: $white;}
+			a{
+				display: block;
+				border-radius:50%;
+				text-indent: -9999px;
+				@include square(10px);
+				border:2px solid $white;
+				&:hover{text-decoration: none;}
+                &:hover{
+                    background: $white;
+                    text-decoration: none;
+                }
+			}
+		}
+	}
+}
+/*------------------------------------------------------------------
+6-4. photo heading Styles / .photo-heading
+-------------------------------------------------------------------*/
+.photo-heading{
+    margin:0;
+    color:$shark;
+    text-transform: capitalize;
+    font:italic 48px/50px $font-family-base;
+    @include breakpoint($screen-sm-max){
+        font-size: 30px;
+        line-height: 40px;
+    }
+    @include breakpoint($screen-xs-max){
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

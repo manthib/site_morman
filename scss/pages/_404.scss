@@ -1,0 +1,432 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+25-1. 404 page Styles
+25-2. error section Styles / .error-section
+25-3. lost block Styles / .lost-block
+25-4. btn back Styles / .btn-back
+25-5. error form Styles / .error-form
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+25-2. error section Styles / .error-section
+-------------------------------------------------------------------*/
+.error-section {
+    color: $stack;
+	position: relative;
+	line-height: 24px;
+	@include breakpoint($screen-xs-max){
+		font-size: 10px;
+		line-height: 15px;
+		height: auto !important;
+	}
+	&:after {
+		@extend %postionreset;
+        background: rgba($black, 0.6);
+		content: '';
+	}
+	&.style2{
+        color: #c2c2c2;
+		&:after{display: none;}
+		.logo{margin: 0 0 68px;}
+		.text-uppercase{color: $white;}
+		.error-info{margin: 0 0 -2px;}
+		.text{margin: 0 0 30px;}
+		.error-form{
+			margin: 0 auto  48px;
+			.form-control{width: 82.5%;}
+			.btn-slider{width: 17.1%;}
+		}
+	}
+	&.style3{
+        color: #c2c2c2;
+		&:after{display: none;}
+		.logo{margin: 0 0 61px;}
+		.text{margin: 0;}
+		.text-uppercase{color: $white;}
+		.wedding-nav .countdown-section{ background: none;}
+	}
+	&.style4{
+		color: #c2c2c2;
+		.logo{margin: 0 0 59px;}
+		.text{margin: 0;}
+		&:after{background: rgba($black, 0.4);}
+		h1{
+			font-size:30px;
+			margin: 0 0 55px;
+		}
+        .footer-social a{
+            opacity: 1;
+            &:hover{color: $carmine-pink;}
+        }
+		.text-uppercase{color: $white;}
+		.wedding-nav{
+			margin: 0 0 52px;
+			.countdown-section{
+				padding:0;
+				border: 0;
+				height: auto;
+                color: $white;
+				margin:0 10px;
+				overflow: hidden;
+                background: none;
+				position: relative;
+				@include breakpoint($screen-xs-max){
+					margin:0 1px;
+				}
+				.countdown-amount{
+					display: block;
+					margin:0 0 22px;
+					font-size: 68px;
+					font-weight: 400;
+					line-height:130px;
+					border-radius: 100%;
+					@include square(134px);
+					border:2px solid $white;
+                    background:rgba(255, 255, 255, 0.1);
+					@include breakpoint($screen-xs-max){
+						font-size: 30px;
+						margin:0 0 12px;
+						line-height: 60px;
+						@include square(65px);
+					}
+				}
+				.countdown-period{
+					display: block;
+					position: relative;
+					right: auto;
+					left: auto;
+					bottom: auto;
+					padding: 0;
+                    color: $white;
+                    background:none;
+				}
+			}
+		}
+	}
+	&.style5{
+		.container{
+			padding-top: 0;
+			padding-bottom: 0;
+			&:before {min-height: inherit;}
+		}
+		.holder{
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		h1{
+            color: $white;
+			font-size: 20px;
+			line-height: 28px;
+			letter-spacing: 4px;
+			margin: 0 0 47px;
+		}
+		.wedding-nav{
+			margin: 0;
+			@include breakpoint($screen-xs-max){
+				margin: 0 0 50px;
+			}
+			.countdown-section{
+				padding:0;
+				border: 0;
+                color: $white;
+				height: auto;
+				margin:0 10px;
+				overflow: hidden;
+                background: none;
+				position: relative;
+				@include breakpoint($screen-xs-max){
+					margin:0 1px;
+				}
+				.countdown-amount{
+					font-weight: 400;
+					font-size: 68px;
+					line-height:70px;
+					margin:0 0 52px;
+					@include breakpoint($screen-xs-max){
+						font-size: 38px;
+						line-height: 40px;
+						margin:0 0 12px;
+					}
+				}
+				.countdown-period{
+					display: block;
+					position: relative;
+					right: auto;
+					left: auto;
+					bottom: auto;
+					padding: 0;
+                    background: none;
+                    color: $white;
+				}
+			}
+		}
+	}
+	.container {
+		padding-bottom: 30px;
+		white-space: nowrap;
+		position: relative;
+		padding-top: 30px;
+		z-index: 10;
+		@include breakpoint($screen-xs-max){
+			height: auto  !important;
+		}
+		&:before {
+			vertical-align: middle;
+			display: inline-block;
+			margin: 0 0 0 -4px;
+			overflow: hidden;
+			height: 100%;
+			content: '';
+			width: 1px;
+		}
+		.holder {
+			vertical-align: middle;
+			display: inline-block;
+			white-space: normal;
+			max-width: 890px;
+		}
+	}
+	.logo {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 57px;
+		width: 101px;
+		float: none;
+		@include breakpoint($screen-xs-max){
+			margin: 0 0 27px;
+		}
+	}
+	h1 {
+        color: $white;
+		letter-spacing: 6px;
+		line-height: 36px;
+		margin: 0 0 19px;
+		font-size: 28px;
+		font-weight: 400;
+		@include breakpoint($screen-xs-max){
+			font-size: 15px;
+		}
+	}
+	h2{
+		letter-spacing: 3px;
+		line-height: 22px;
+		margin: 0 0 26px;
+		font-size: 18px;
+		font-weight: 400;
+		@include breakpoint($screen-xs-max){
+			font-size: 15px;
+		}
+	}
+	.error-info {
+		letter-spacing: 5px;
+		line-height: 34px;
+		margin: 0 0 57px;
+		font-size: 28px;
+        color: $ghost-white;
+		@include breakpoint($screen-xs-max){
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0 0 27px;
+		}
+		.error-code {
+            color: $white;  
+			display: block;
+			font-weight: 700;
+			font-size: 162px;
+			line-height: 168px;
+			letter-spacing: 3px;
+			font-family: $font-family-sans-serif;
+			@include breakpoint($screen-xs-max){
+				font-size: 50px;
+				line-height: 50px;
+			}
+		}
+	}
+	.text {
+		padding: 0 0 19px;
+		@include breakpoint($screen-xs-max){
+			padding: 0 0 9px;
+		}
+		a:hover {text-decoration: none;}
+        a:hover {color: $stack;}
+	}
+	.text2{
+		font-size: 20px;
+		overflow: hidden;
+		margin: 0 0 44px;
+		line-height: 28px;
+		letter-spacing: 4px;
+		@include breakpoint($screen-xs-max){
+			font-size: 12px;
+			line-height: 18px;
+		}
+		p{margin: 0 0 10px;}
+	}
+	.btn-list{
+		margin: 0;
+		li {
+			vertical-align: top;
+			padding: 0 4px 10px;
+		}
+	}
+	.footer-social{
+		li{
+			padding: 0;
+			margin: 0 17px;
+			@include breakpoint($screen-xs-max){
+				margin: 0 7px;
+			}
+		}
+		a{
+            color: $white;
+			width: auto;
+			height: auto;
+			opacity: 0.2;
+			font-size: 20px;
+            background: none;
+			transition:all 0.3s ease;
+            &:hover{background: transparent !important;}
+            &:hover{opacity: 1;}
+		}
+	}
+	.wedding-nav{
+		margin: 0 0 52px;
+		text-transform: uppercase;
+		font:14px/18px $font-family-sans-serif;
+		@include breakpoint($screen-xs-max){
+			font-size: 10px;
+			line-height: 14px;
+		}
+		.countdown-section{
+			margin:0 10px;
+            color: $white;
+			border-radius:0;
+			overflow: hidden;
+			position: relative;
+			padding:15px 10px 10px;
+			border:2px solid $white;
+			@include size(134px, 166px);
+			@include vertical-align(inline-block, top);
+			@include breakpoint($screen-xs-max){
+				margin:0 1px;
+				padding: 5px 10px 5px;
+				@include size(68px, 106px);
+			}
+			.countdown-amount{
+				display: block;
+				font-size: 68px;
+				font-weight: 700;
+				line-height:70px;
+				margin:8px 0 7px;
+				@include breakpoint($screen-xs-max){
+					font-size: 38px;
+					line-height:40px;
+				}
+			}
+			.countdown-period{
+				display: block;
+				position: absolute;
+				right: 0;
+				left: 0;
+				bottom: 0;
+                color: $lime;
+                background:$white;
+				padding: 13px 10px;
+			}
+		}
+	}
+	.btn-down{
+        color: $white;
+		position: absolute;
+		bottom: 46px;
+		left: 50%;
+		z-index: 999;
+		font-size: 60px;
+		line-height: 40px;
+		margin: 0 0 0 -20px;
+		overflow: hidden;
+		transition:all 0.3s ease;
+	}
+}
+/*------------------------------------------------------------------
+25-3. lost block Styles / .lost-block
+-------------------------------------------------------------------*/
+.lost-block{
+	text-align: center;
+	padding-top: 196px;
+	padding-bottom: 209px;
+	@include breakpoint($screen-xs-max){
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	h2{
+		margin: 0 0 60px;
+		text-transform: uppercase;
+		font:900 100px/90px $font-family-base;
+		text-shadow:2px 2px 3px rgba(0, 0, 0, 0.5);
+		@include breakpoint($screen-xs-max){
+			font-size: 40px;
+			line-height: 50px;
+		}
+        span{
+            color: $shark;
+            .dark &{color: $stack;}
+        }
+	}
+}
+/*------------------------------------------------------------------
+25-4. btn back Styles / .btn-back
+-------------------------------------------------------------------*/
+.btn-back{
+	border-radius: 0;
+	padding: 8px 20px;
+	text-align: center;
+	position: relative;
+	transition:all 0.3s ease;
+	text-transform: uppercase;
+	border:1px solid transparent;
+	@include vertical-align(inline-block, top);
+	.fa{
+		@include vertical-align(inline-block, middle);
+		font-size: 16px;
+        margin: -3px 4px 0 0;
+	}
+	&:hover{color: $white;}
+}
+/*------------------------------------------------------------------
+25-5. error form Styles / .error-form
+-------------------------------------------------------------------*/
+.error-form{
+	border:1px solid $white;
+	width: 360px;
+	margin: 0 auto  18px;
+	display: block;
+	@include breakpoint($screen-xs-max){
+		width: 280px;
+	}
+	.form-control{
+		border: 0;
+		padding: 6px 10px 6px 21px;
+		float: left;
+		width: 70%;
+		border-radius: 0;
+		font-size: 12px;
+		line-height: 18px;
+		height: 36px;
+        color: $white;
+        background: none;
+        @include placeholder{color: $white;}
+	}
+     @include placeholder{color: $white;}
+	.btn{
+		float: right;
+		width: 29.5%;
+		height: 36px;
+        color: $black;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 18px;
+        background:$white;
+	}
+}
