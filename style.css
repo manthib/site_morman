@@ -1,3 +1,40 @@
+#section2 > div > div > div > img {
+	margin: auto;
+}
+#section3 > div > div > div.col-xs-3.col-sm-3.clearfix-sm {
+	float: right;
+  left: -7em;
+}
+#section3 > div > div > div {
+	left: 7em;
+}
+#section4 > div > header > div.col-sm-6 {
+	display: block;
+  margin: auto;
+  float: none;
+}
+#section4 > div > header > div.col-sm-6 > img {
+	margin: auto;
+}
+#section5 {
+	padding: 0;
+}
+#section6 > div.container > form {
+	width: 55%;
+  float: right;
+}
+#section6 > div.container > header {
+	width: 55%;
+	float: right;
+	margin-bottom: 0;
+}
+#section6 > div.container {
+	padding-top: 6em;
+}
+#section6 > div.footer-bottom {
+	bottom: 0;
+	position: absolute;
+}
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
