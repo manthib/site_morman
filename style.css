@@ -1,6 +1,17 @@
 #nav > div > ul > li:nth-child(6) > a, #nav > div > ul > li:nth-child(6).active > a {
     border-color: transparent !important;
 }
+@media (max-width: 1219px) {
+    #header > div.container {
+        width: 1100px;
+    }
+    #nav > div > ul > li:nth-child(6) {
+        border: none;
+    }
+}
+#nav > div > ul > li:nth-child(6) > a, #nav > div > ul > li:nth-child(6).active > a {
+    border-color: transparent !important;
+}
 #section2 > div > div > div > img {
 	margin: auto;
 }
