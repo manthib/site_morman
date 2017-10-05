@@ -1,3 +1,6 @@
+#nav > div > ul > li:nth-child(6) > a, #nav > div > ul > li:nth-child(6).active > a {
+    border-color: transparent !important;
+}
 #section2 > div > div > div > img {
 	margin: auto;
 }
