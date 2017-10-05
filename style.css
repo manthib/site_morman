@@ -8,6 +8,15 @@
 #section3 > div > div > div {
 	left: 7em;
 }
+#section3 > div > img {
+    position: absolute;
+    left: 50%;
+    margin-left: -50%;
+    width: 100%;
+}
+#section3 > div > div {
+    padding-top: 17%;
+}
 #section4 > div > header > div.col-sm-6 {
 	display: block;
   margin: auto;
@@ -15,6 +24,9 @@
 }
 #section4 > div > header > div.col-sm-6 > img {
 	margin: auto;
+}
+#section4 {
+	padding-top: 20em;
 }
 #section5 {
 	padding: 0;
@@ -34,6 +46,16 @@
 #section6 > div.footer-bottom {
 	bottom: 0;
 	position: absolute;
+}
+.copyright {
+    float: left !important;
+    left: 0;
+}
+.footer-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-transform: uppercase;
 }
 /*------------------------------------------------------------------
 [Master Stylesheet]
