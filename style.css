@@ -36,6 +36,9 @@
   margin: auto;
   float: none;
 }
+#section4 > div > header > div.row > div:nth-child(1) {
+    float: right;
+}
 #section4 > div > header > div.col-sm-6 > img {
 	margin: auto;
 }
