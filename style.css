@@ -1,8 +1,19 @@
+#header > div > div > div > div > a > img.img-responsive.b-logo {
+    transform: translateY(10%);
+}
 #nav > div > ul > li:nth-child(6) > a, #nav > div > ul > li:nth-child(6).active > a {
     border-color: transparent !important;
 }
 #nav > div > ul > li:nth-child(6) > a {
     padding-bottom: 0 !important;
+}
+#header {
+    padding: 0 !important;
+}
+@media (max-width: 991px) {
+    #header {
+        height: 0;
+    }
 }
 @media (max-width: 1219px) {
     #header > div.container {
@@ -17,6 +28,14 @@
 }
 #section1 > div > div > div > div > div.beans-mask > div > div > blockquote > div > a > img, #section1 > div > div > div > div > div.beans-mask > div > div > blockquote > a > img {
     border-radius: 8px;
+}
+#section1 {
+    background: url(images/accueil/accueil.png) no-repeat center center fixed !important;
+    height: -webkit-fill-available;
+    min-height: 51em;
+}
+#section1 > div > div > div > div {
+    min-height: 45em;
 }
 #section2 > div > div > div > img {
 	margin: auto;
