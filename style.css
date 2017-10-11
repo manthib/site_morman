@@ -241,6 +241,10 @@
     text-transform: none;
     font-weight: 400;
 }
+.animated {
+  -webkit-animation-duration: 0.5s !important;
+  animation-duration: 0.5s !important;
+}
 @media (max-width: 1219px) {
     #header > div.container {
         width: 1100px;
