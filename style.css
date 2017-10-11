@@ -22,15 +22,6 @@
     #header {
         height: 0;
     }
-    #section3 > div > div > div:nth-child(1) {
-        width: 33%;
-        left: 0 !important;
-    }
-    #section3 > div > div > div:nth-child(3) {
-        width: 33%;
-        left: 0;
-        right: 0;
-    }
     #section3 > div > div {
         padding-top: 3% !important;
     }
@@ -38,12 +29,45 @@
         position: inherit !important;
     }
     #section4 > div > header > div.col-sm-6 {
-            width: 65%;
+        width: 65%;
+    }
+    #section3 > div > div > div:nth-child(1) {
+        width: 35%;
+        float: none !important;
+        margin: auto;
+        left: 0 !important;
+    }
+    #section3 > div > div > div:nth-child(2) {
+        float: none !important;
+        margin: 16.31em 10em 0 auto;
+        right: 0em;
+    }
+    #section3 > div > div > div:nth-child(3) {
+        width: 35%;
+        margin: auto;
+        float: none;
+        margin-top: -8.2em;
+        left: 0 !important;
+    }
+    #section3 > div > div > div:nth-child(3) > div {
+        width: 100%;
+    }
+    #section3 {
+        background-color: #5D4037;
+    }
+    #section3 > div > img {
+        display: none;
     }
 }
 @media (max-width: 767px) {
     #section1 > div > div > div > div > div.beans-mask > div > div:nth-child(2) > blockquote > a > img {
             width: 85%;
+    }
+    #section3 > div > div > div:nth-child(2) {
+        display: none;
+    }
+    #section3 > div > div > div:nth-child(3) {
+        margin-top: 0;
     }
 }
 @media (max-width: 662px) {
@@ -54,6 +78,13 @@
 @media (max-width: 575px) {
     #section4 > div > header > div.col-sm-6 {
             width: 85%;
+    }
+    #section3 > div > div > div:nth-child(1) {
+        width: 45%;
+    }
+    #section3 > div > div > div:nth-child(3) {
+        width: 45%;
+        margin-top: 0;
     }
 }
 @media (max-width: 475px) {
@@ -76,6 +107,12 @@
     }
     #section6 > div.container {
         padding-bottom: 2em;
+    }
+    #section3 > div > div > div:nth-child(1) {
+        width: 50%;
+    }
+    #section3 > div > div > div:nth-child(3) {
+        width: 50%;
     }
 }
 #nav > div > ul > li:nth-child(6) > a, #nav > div > ul > li:nth-child(6).active > a {
@@ -112,7 +149,7 @@
     width: 100%;
 }
 #section3 > div > div {
-    padding-top: 27%;
+    padding-top: 20%;
 }
 #section3 > div > div > div.square {
     -webkit-transform: rotate(45deg);
