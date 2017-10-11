@@ -27,6 +27,22 @@
 #section1 > div > div > div > div > div.beans-mask {
     width: 65%;
 }
+#section1 > div > div > div > ul {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    margin: 0 0 3em -1em;
+}
+#section1 > div > div > div > div > div.beans-mask > div > div.beans-slide > blockquote > header {
+    margin-bottom: 1em;
+}
+#section1 > div > div > div > ul > li > img {
+    padding: 0;
+    border: none;
+}
+#section1 > div > div > div > ul > li > span {
+    padding-top: 16px;
+}
 #section2 > div > div > div > img {
 	margin: auto;
 }
@@ -313,6 +329,13 @@
     }
     #section3 > div > div > div:nth-child(3) {
         width: 50%;
+    }
+    #section1 > div > div > div > ul {
+        margin: 0px 0 1em 0em;
+        width: 95%;
+    }
+    #section1 > div > div > div > div > div.beans-mask {
+        width: 100%;
     }
 }
 
