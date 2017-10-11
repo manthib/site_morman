@@ -16,6 +16,9 @@
 #section1 > div > div > div > div > div.beans-mask > div > div > blockquote > div > a > img, #section1 > div > div > div > div > div.beans-mask > div > div > blockquote > a > img {
     border-radius: 8px;
 }
+#section1 > div > div > div > div > div.beans-mask > div > div.beans-slide > blockquote > header > h1 {
+    font-size: 36px;
+}
 #section1 {
     background: url(images/accueil/accueil.png) no-repeat center center fixed !important;
     height: -webkit-fill-available;
