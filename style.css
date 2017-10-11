@@ -251,6 +251,9 @@
     }
 }
 @media (max-width: 767px) {
+    #nav > a {
+        position: fixed;
+    }
     #section1 > div > div > div > div > div.beans-mask > div > div:nth-child(2) > blockquote > a > img {
             width: 85%;
     }
