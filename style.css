@@ -43,6 +43,9 @@
 #section1 > div > div > div > ul > li > span {
     padding-top: 16px;
 }
+#section2, #section3 {
+    padding-top: 0 !important;
+}
 #section2 > div > div > div > img {
 	margin: auto;
 }
@@ -58,6 +61,7 @@
     left: 50%;
     margin-left: -50%;
     width: 100%;
+    max-height: 54em;
 }
 #section3 > div > div {
     padding-top: 20%;
@@ -113,11 +117,19 @@
 #section4 > div > header > div.col-sm-6 > img {
 	margin: auto;
 }
+#section3 {
+}
 #section4 {
-	padding-top: 20em;
+	padding-top: 0;
 }
 #section5 {
 	padding: 0;
+}
+#section6 {
+    padding-top: 12em;
+}
+#section6 > div.container {
+    padding-bottom: 6em;
 }
 #notre_expertise_verticale {
     display: none;
@@ -130,9 +142,6 @@
 	width: 55%;
 	float: right;
 	margin-bottom: 0;
-}
-#section6 > div.container {
-	padding-top: 6em;
 }
 #section6 > div.footer-bottom {
 	bottom: 0;
@@ -292,7 +301,7 @@
 }
 @media (max-width: 767px) {
     #nav > a {
-        position: fixed;
+        position: fixed !important;
     }
     #section1 > div > div > div > div > div.beans-mask > div > div:nth-child(2) > blockquote > a > img {
             width: 85%;
