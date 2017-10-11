@@ -297,6 +297,11 @@
     #section1 > div > div > div > div > div.beans-mask > div > div:nth-child(2) > blockquote > a > img {
             width: 85%;
     }
+    #section2 > header > p {
+        padding-left: 2em;
+        padding-right: 2em;
+        font-size: 15px;
+    }
     #section3 > div > div > div:nth-child(2) {
         display: none;
     }
@@ -326,6 +331,10 @@
     }
     #section4 > div.business-block.padding-top-90 > div > div > div > div > div {
         width: 76.9%;
+        top: 2em;
+    }
+    #section4 > div.business-block.padding-top-90 > div > div > div {
+        padding-top: 2em;
     }
 }
 @media (max-width: 662px) {
