@@ -32,7 +32,7 @@ if (!$errors) {
 	<head></head>
 	<body>
 	<table>
-		<tr><td>Nome</td><td>' . $name . '</td></tr>
+		<tr><td>Nom</td><td>' . $name . '</td></tr>
 		<tr><td>Email</td><td>' . $email . '</td></tr>
 		<tr><td>Commentaire</td><td>' . nl2br($comment) . '</td></tr>
 	</table>
