@@ -163,6 +163,14 @@
 #section6 > div.container > header > h2 {
     color: #191517;
 }
+#section6 > div.container > form > fieldset > div:nth-child(2) > div > span > span.jcf-select-text{
+  color: black;
+
+}
+#section6 > div.container > form > fieldset > div:nth-child(2) > div > span{
+  background-color: white;
+  border: white;
+}
 .copyright {
     float: left !important;
     left: 0;
@@ -193,9 +201,39 @@
   background: white;
 }
 
-#section6 > div.container > form > fieldset > div:nth-child(2) > div > textarea{
+#section6 > div.container > form > fieldset > div:nth-child(3) > div > textarea{
   -webkit-text-fill-color: black;
   background: white;
+}
+#section6 > div.row > div > div > h3{
+  color: black;
+}
+#section6 > div.row > div > div > div.tel-holder > span > a:nth-child(2){
+      color: darkslateblue;
+}
+#section6 > div.row > div > div > div.tel-holder > span > i{
+  color: black;
+}
+#section6 > div.row > div > div > div.tel-holder > span > a:nth-child(4){
+  color: darkslateblue;
+}
+#section6 > div.row > div > div > div:nth-child(3) > span > i{
+  color: black;
+}
+#section6 > div.row > div > div > div:nth-child(3) > span > a{
+  color: darkslateblue;
+}
+#section6 > div.row > div > div > div:nth-child(3) > span > a:hover{
+  color: black;
+}
+#section6 > div.row > div > div > div:nth-child(4) > span > i{
+  color: black;
+}
+#section6 > div.row > div > div > div:nth-child(4) > span > a{
+  color: darkslateblue;
+}
+#section6 > div.row > div > div > div:nth-child(4) > span > a:hover{
+  color: black;
 }
 #section4 > div.business-block.padding-top-90 > div > div > div > div > div > p:nth-child(1) {
     padding-top: 0.5em;
@@ -4499,6 +4537,7 @@ body {
 .services-section.style6 {
 	padding-top: 100px;
 	padding-bottom: 60px;
+
 }
 
 .services-section.style6 .text-box {
