@@ -131,9 +131,7 @@
 #section6 {
     padding-top: 16em;
 }
-#section6 > div.container {
-    padding-bottom: 6em;
-}
+
 #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block {
     padding-top: 10em;
     padding-left: 26em;
