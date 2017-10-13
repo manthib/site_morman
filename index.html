@@ -459,48 +459,52 @@
 	                        <header class="page-heading white">
 	                            <h2 class="heading8 white text-capitalize font-medium margin-bottom-20">Contactez-nous</h2>
 	                        </header>
-							<!-- email form -->
-							<form class="email-form validate-form" method="post" action="inc/process.php" novalidate="novalidate">
-								<fieldset>
-									<div class="row">
-										<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-md-offset-1 col-lg-offset-2 required-row">
-											<input type="text" class="form-control" placeholder="Votre Nom - Prénom :" name="name">
-										</div>
-										<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 required-row">
-											<input type="email" class="form-control" placeholder="Votre Email :" name="email">
-										</div>
-									</div>
-									<div class="row">
-									<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2 required-row">
-				<!--						<input type="email" class="form-control" placeholder="Votre Objectif :" name="email"> -->
+                                <div class="col-xs-12 col-sm-6 col-md-3 column3 info-block">
+                                    <!-- f contact info2 -->
+                                    <div class="f-contact-info2">
+                                            <h3>Informations</h3>
 
-										<i class="fa fa-chevron-down" ></i>
-								<select data-jcf='{"wrapNative": false}'>
-											<option>Votre Objectif :</option>
-											<option>Augmenter le trafic de mon site</option>
+                                            <div class="tel-holder">
+                                                    <span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:0033634683235">0634683235</a> <br><a class="tel" href="tel:0033678122391">0678122391</a></span>
+                                            </div>
+                                            <div class="mail-box2">
+                                                    <span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:contact@morman.fr"> contact@morman.fr</a></span>
+                                            </div>
+                                            <div class="mail-box2">
+                                                    <span class="mail-box"><i class="fa fa-link"></i> <a class="email" href="www.morman.fr">www.morman.fr</a></span>
+                                            </div>
+                                    </div>
+                            </div>
+                            <form class="email-form validate-form" method="post" action="inc/process.php" novalidate="novalidate">
+                              <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-md-offset-1 col-lg-offset-2 required-row">
+                                <input type="text" class="form-control" placeholder="Votre Nom - Prénom :" name="name">
+                              </div>
+                              <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 required-row">
+                                <input type="email" class="form-control" placeholder="Votre Email :" name="email">
+                              </div>
+                              <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2 required-row">
+                                <select class="form-control custom-select" id="exampleFormControlSelect1" name='choice'>
+                                            <option value="" disabled selected>Votre objectif :</option>
+                                            <option>Augmenter le trafic de mon site</option>
 											<option>Créer mon site internet</option>
 											<option>Une refonte de mon site internet</option>
 											<option>J'ai besoin d'un audit référencement de mon site</option>
-											<option>---</option>
+											<option disabled>--------------------------------------------------------------------------</option>
 											<option>Créer une interface e-commerce</option>
 											<option>Créer une billeterie en ligne</option>
-											<option>---</option>
+											<option disabled>--------------------------------------------------------------------------</option>
 											<option>Je préfère en parler par téléphone</option>
-										</select>
-									</div>
-								</div>
-									<div class="row">
-										<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2 required-row">
+                                </select>
+                              </div>
+                              <div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2 required-row">
 											<textarea cols="30" class="form-control" rows="10" placeholder="Votre Message :" name="comment"></textarea>
-										</div>
-									</div>
-									<div class="row text-center">
-										<div class="col-xs-12">
-                                            <button id="submit" type="submit"><img src="images/footer/bouton_envoyer.png" alt="envoyer"></button>
-										</div>
-									</div>
-								</fieldset>
-							</form>
+				              </div> 
+                              <div class="row text-center">
+								<div class="col-xs-12">
+                                    <button id="submit" type="submit"><img src="images/footer/bouton_envoyer.png" alt="envoyer"></button>
+								</div>
+				              </div>
+                            </form>
 	                        <div class="done-massage">
 	                            <div class="holder"><strong>Merci!</strong> Nous avons reçu votre message</div>
 	                        </div>
@@ -508,24 +512,6 @@
 						<div class="stretch">
 							<img src="images/footer/footer.png" alt="image description">
 						</div>
-						<div class="row">
-						<div class="col-xs-12 col-sm-6 col-md-3 column3">
-								<!-- f contact info2 -->
-								<div class="f-contact-info2">
-										<h3>Informations</h3>
-
-										<div class="tel-holder">
-												<span class="tel-box"><i class="fa fa-phone"></i> <a class="tel" href="tel:0033634683235">0634683235</a> <br><a class="tel" href="tel:0033678122391">0678122391</a></span>
-										</div>
-										<div class="mail-box2">
-												<span class="mail-box"><i class="fa fa-envelope-o"></i> <a class="email" href="mailto:contact@morman.fr"> contact@morman.fr</a></span>
-										</div>
-										<div class="mail-box2">
-												<span class="mail-box"><i class="fa fa-link"></i> <a class="email" href="www.morman.fr">www.morman.fr</a></span>
-										</div>
-								</div>
-						</div>
-					</div>
 						<div class="footer-bottom">
 		                    <div class="container">
 		                        <div class="row">
@@ -554,5 +540,7 @@
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 	<!-- include plugins JavaScript -->
 	<script type="text/javascript" src="js/plugins.js"></script>
+    <!-- initiate dropdowns -->
+    <script type="text/javascript">$('.dropdown-toggle').dropdown()</script>
 </body>
 </html>

@@ -5,14 +5,18 @@
 //POST - in case user does not support javascript, we'll use POST instead
 $name = ($_GET['name']) ? $_GET['name'] : $_POST['name'];
 $email = ($_GET['email']) ?$_GET['email'] : $_POST['email'];
+$choice = ($_GET['choice']) ?$_GET['choice'] : $_POST['choice'];
 $comment = ($_GET['comment']) ?$_GET['comment'] : $_POST['comment'];
+
+echo $choice;
 
 //flag to indicate which method it uses. If POST set it to 1
 if ($_POST) $post=1;
 
 //Simple server side validation for POST data, of course, you should validate the email
 if (!$name) $errors[count($errors)] = 'Veuillez entrer votre nom';
-if (!$email) $errors[count($errors)] = 'Veuillez entrer votre email.'; 
+if (!$email) $errors[count($errors)] = 'Veuillez entrer votre email.';
+if (!$choice) $errors[count($errors)] = 'Veuillez entrer votre objectif.'; 
 if (!$comment) $errors[count($errors)] = 'Veuillez entrer votre commentaire'; 
 
 //if the errors array is empty, send the mail
@@ -34,6 +38,7 @@ if (!$errors) {
 	<table>
 		<tr><td>Nom</td><td>' . $name . '</td></tr>
 		<tr><td>Email</td><td>' . $email . '</td></tr>
+        <tr><td>Objectif</td><td>' . $choice . '</td></tr>
 		<tr><td>Commentaire</td><td>' . nl2br($comment) . '</td></tr>
 	</table>
 	</body>
