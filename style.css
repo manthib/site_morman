@@ -136,7 +136,7 @@
 }
 #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block {
     padding-top: 10em;
-    padding-left: 15em;
+    padding-left: 26em;
     width: 45%;
 }
 #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block > div > div.tel-holder > span, #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block > div > div > span > i, #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block > div > div > span > a, #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block > div > h3 {
@@ -326,6 +326,9 @@
     }
     #section3 > div > div > div.square {
         left: -5.5em !important;
+    }
+    #section6 > div.container > div.col-xs-12.col-sm-6.col-md-3.column3.info-block {
+        padding-left: 15em;
     }
 }
 @media (max-width: 991px) {
