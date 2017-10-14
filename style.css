@@ -156,13 +156,13 @@
 	bottom: 0;
 	position: absolute;
 }
-#submit {
+#envoyer {
     padding: 0;
     border: none;
     background: transparent;
     width: 15em;
 }
-#submit > img {
+#envoyer > img {
     width: 100%;
     border-radius: 8px;
 }
